@@ -16,6 +16,10 @@ const ticketSchema = new mongoose.Schema({
         required: true,
         min: 0
     },
+    ticketType:{
+        type: String,
+        required: true
+    },
     quantity: {
         type: Number,  
         required: true, 
@@ -25,7 +29,8 @@ const ticketSchema = new mongoose.Schema({
         type: Number,
         required: true,
         min: 0
-    }
+    },
+    
 },{ timestamps: true})
 
 const Ticket = mongoose.model("Ticket", ticketSchema)

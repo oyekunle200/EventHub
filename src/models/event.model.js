@@ -34,7 +34,7 @@ const eventSchema = new mongoose.Schema({
     category: {
         type: string,
         required: true,
-        enum: ["music", "sports", "theater", "comedy", "conference", "festival"],
+        
     },
     organizer: {
         type : mongoose.Schema.Types.ObjectId,
@@ -62,7 +62,7 @@ const eventSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now
+        default: Date.now()
     }
 },{ timestamps: true})
 
